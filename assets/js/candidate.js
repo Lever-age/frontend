@@ -1,8 +1,11 @@
-var apiRoot = 'http://api.leveragecampaignfinance.org';
+var apiRoot = {
+  prod: 'http://api.leveragecampaignfinance.org',
+  dev: '/test-data'
+};
 
-function setApiRoot (root) {
+function setApiRoot (root, suffix) {
   return function getEndpoint (path) {
-    return root + path;
+    return root + path + (suffix || '');
   }
 }
 
@@ -18,9 +21,14 @@ function getParams () {
 }
 
 $(document).ready(function(){
-  var getEndpoint = setApiRoot(apiRoot);
   var params = getParams();
   if (!params.id) return;
+  var getEndpoint;
+  if (params.test) {
+    getEndpoint = setApiRoot(apiRoot.dev, '.json');
+  } else {
+    getEndpoint = setApiRoot(apiRoot.prod);
+  }
   var endpoint = getEndpoint('/candidates/' + params.id);
   $.get(endpoint, function(candidate){
     $('#candidate-name').text(candidate.candidate_name);

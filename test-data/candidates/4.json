@@ -1,0 +1,419 @@
+{
+    "campaigns": [
+        {
+            "campaign_id": 4,
+            "campaign_summary": [
+                {
+                    "campaign_id": 4,
+                    "summary_level": "10",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 53
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "20",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 63
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "30",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 40
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "40",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 25
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "50",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 20
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "60",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 20
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "70",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 11
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "80",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 6
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "90",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 6
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "100",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 16
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "110",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "120",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 2
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "130",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 4
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "140",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 2
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "150",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 3
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "160",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 2
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "180",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "200",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "250",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 2
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "260",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "270",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "360",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "380",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 2
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "420",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 4
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "430",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "450",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "500",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 3
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "520",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "550",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "570",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "600",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "610",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "710",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "780",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "800",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "1000",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 2
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "1110",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "1240",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "1270",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "1500",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 6
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "1780",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "2000",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 3
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "2150",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 5
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "2200",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 3
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "2500",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 2
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "2790",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "2800",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "4000",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 7
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "4320",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "4850",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "5000",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 2
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "5150",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "5810",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 3
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "6000",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 3
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "6400",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "6480",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 3
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "7060",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "9590",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "9990",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "11500",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 3
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "11520",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "15130",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "17350",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "19140",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "20000",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "25000",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 4,
+                    "summary_level": "28170",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 3
+                }
+            ],
+            "candidate_id": 4,
+            "candidate_name": "Dan Tinney",
+            "candidate_party": "Made-up party",
+            "candidate_position": "Council-At-Large",
+            "election_cycle": "general",
+            "election_year": 2015
+        }
+    ],
+    "candidate_id": 4,
+    "candidate_name": "Dan Tinney"
+}
