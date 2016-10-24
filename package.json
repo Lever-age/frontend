@@ -1,0 +1,11 @@
+{
+  "name": "leverage-frontend",
+  "version": "1.0.0",
+  "description": "Leverage user facing frontend",
+  "scripts": {
+    "start": "http-server"
+  },
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
