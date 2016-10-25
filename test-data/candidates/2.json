@@ -1,0 +1,227 @@
+{
+    "campaigns": [
+        {
+            "campaign_id": 2,
+            "campaign_summary": [
+                {
+                    "campaign_id": 2,
+                    "summary_level": "10",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "30",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 3
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "40",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 7
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "50",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 8
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "60",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 7
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "70",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 2
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "80",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 2
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "90",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "100",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 8
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "110",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 3
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "130",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "140",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "150",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 2
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "160",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 2
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "170",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 2
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "180",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "190",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "200",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 3
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "300",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "360",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "400",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "450",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "500",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "600",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 2
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "640",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "700",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "750",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "910",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "1000",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 8
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "1090",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "1200",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "2380",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "3750",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "4120",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                },
+                {
+                    "campaign_id": 2,
+                    "summary_level": "4640",
+                    "summary_type": "donation_histogram",
+                    "summary_value": 1
+                }
+            ],
+            "candidate_id": 2,
+            "candidate_name": "Marian Tasco",
+            "candidate_party": "Fake party",
+            "candidate_position": "District 9",
+            "election_cycle": "general",
+            "election_year": 2015
+        }
+    ],
+    "candidate_id": 2,
+    "candidate_name": "Marian Tasco"
+}
