@@ -13,5 +13,4 @@ export class AboutPageComponent  {
     private about: string = 'about';
     
     constructor() {}
-
 }

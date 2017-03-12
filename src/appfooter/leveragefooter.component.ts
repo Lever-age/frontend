@@ -14,7 +14,6 @@ import { Component } from '@angular/core';
     background-color: gray;
     height: 50px;
 }
-
 .footer-text {
     height: 50px;
     line-height: 50px;
@@ -23,7 +22,6 @@ import { Component } from '@angular/core';
     padding-left: 20px;
     padding-right: 20px;
 }
-
 `]
 })
 export class FooterComponent  { 
