@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <ul class="nav navbar-nav"> 
-        <li class="active"><a href="/">Home</a></li>
+        <li class="active"><a routerLink="/" href="/#">Home</a></li>
         <li><a href="/">Data</a></li>
-        <li><a href="/">About</a></li>
+        <li><a routerLink="/aboutpagecomponent" href="/#">About</a></li>
       </ul>
     </div>
   </nav>

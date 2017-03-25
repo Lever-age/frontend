@@ -11,11 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AboutPageComponent = (function () {
     function AboutPageComponent() {
+        this.about = 'about';
     }
     AboutPageComponent = __decorate([
         core_1.Component({
             selector: 'leverage-about-page',
-            template: "\n  <h1>Hello {{ about }}</h1>",
+            template: "\n  <leverage-header></leverage-header>\n  <h1>Hello {{ about }}</h1>\n  <leverage-footer></leverage-footer>",
         }), 
         __metadata('design:paramtypes', [])
     ], AboutPageComponent);

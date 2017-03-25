@@ -15,7 +15,7 @@ var HeaderComponent = (function () {
     HeaderComponent = __decorate([
         core_1.Component({
             selector: 'leverage-header',
-            template: "\n  <nav class=\"navbar navbar-default navbar-fixed-top\">\n    <div class=\"container\">\n      <ul class=\"nav navbar-nav\"> \n        <li class=\"active\"><a href=\"/\">Home</a></li>\n        <li><a href=\"/\">Data</a></li>\n        <li><a href=\"/\">About</a></li>\n      </ul>\n    </div>\n  </nav>\n  "
+            template: "\n  <nav class=\"navbar navbar-default navbar-fixed-top\">\n    <div class=\"container\">\n      <ul class=\"nav navbar-nav\"> \n        <li class=\"active\"><a routerLink=\"/\" href=\"/#\">Home</a></li>\n        <li><a href=\"/\">Data</a></li>\n        <li><a routerLink=\"/aboutpagecomponent\" href=\"/#\">About</a></li>\n      </ul>\n    </div>\n  </nav>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], HeaderComponent);

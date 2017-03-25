@@ -15,8 +15,8 @@ var FooterComponent = (function () {
     FooterComponent = __decorate([
         core_1.Component({
             selector: 'leverage-footer',
-            template: "\n  <div class=\"footer-container navbar-fixed-bottom\">\n\n  </div>\n  ",
-            styles: ["\n.footer-container {\n    width: 100%;\n    background-color: gray;\n    height: 50px;\n}\n"]
+            template: "\n  <div class=\"footer-container navbar-fixed-bottom\">\n    <div class=\"pull-left\"><p class=\"footer-text\">Leverage</p></div>\n    <div class=\"pull-right\"><p class=\"footer-text\">Contact Us</p></div>\n  </div>\n  ",
+            styles: ["\n.footer-container {\n    width: 100%;\n    background-color: gray;\n    height: 50px;\n}\n\n.footer-text {\n    height: 50px;\n    line-height: 50px;\n    font-size: 14px;\n    color: #fff;\n    padding-left: 20px;\n    padding-right: 20px;\n}\n\n"]
         }), 
         __metadata('design:paramtypes', [])
     ], FooterComponent);
