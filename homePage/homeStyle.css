@@ -1,0 +1,20 @@
+.jumbotron {
+    margin-bottom: 0px;
+    background-image:
+      linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("http://res.cloudinary.com/dtgjo32bk/image/upload/v1492524705/city_achspw.jpg");
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 20vh;
+    height: 100vh;
+    color: white;
+    font-family: 'Merriweather', serif;
+}
+
+.home-header, .home-buttons {
+  margin: 10vh;
+}
