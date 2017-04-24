@@ -16,7 +16,7 @@ var AboutPageComponent = (function () {
     AboutPageComponent = __decorate([
         core_1.Component({
             selector: 'leverage-about-page',
-            template: "\n  <leverage-header></leverage-header>\n  <h1>Hello {{ about }}</h1>\n  <leverage-footer></leverage-footer>",
+            template: "\n  <h1>Hello {{ about }}</h1>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AboutPageComponent);

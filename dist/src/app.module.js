@@ -12,25 +12,26 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
 var common_1 = require('@angular/common');
+var ngx_dropdown_1 = require("ngx-dropdown");
+var homepage_component_routes_1 = require('./homepage.component.routes');
 var homepage_component_1 = require('./homepage/homepage.component');
 var aboutpage_component_1 = require('./aboutpage/aboutpage.component');
 var leveragefooter_component_1 = require('./appfooter/leveragefooter.component');
 var leverageheader_component_1 = require('./appheader/leverageheader.component');
+var not_found_component_1 = require('./notfound/not-found.component');
 var app_component_1 = require('./app.component');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule,
-                router_1.RouterModule.forRoot([
-                    {
-                        path: 'homepagecomponent',
-                        component: homepage_component_1.HomepageComponent
-                    }
-                ])],
+            imports: [
+                platform_browser_1.BrowserModule,
+                ngx_dropdown_1.DropdownModule,
+                router_1.RouterModule.forRoot(homepage_component_routes_1.leverageroutes)
+            ],
             declarations: [app_component_1.AppComponent, homepage_component_1.HomepageComponent, aboutpage_component_1.AboutPageComponent,
-                leveragefooter_component_1.FooterComponent, leverageheader_component_1.HeaderComponent],
+                leveragefooter_component_1.FooterComponent, leverageheader_component_1.HeaderComponent, not_found_component_1.NotFoundComponent],
             bootstrap: [app_component_1.AppComponent],
             providers: [{ provide: common_1.APP_BASE_HREF, useValue: '/' }]
         }), 
