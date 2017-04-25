@@ -12,19 +12,24 @@ import { LeverageConstants } from './../constants/common/leverage.constants';
   selector: 'leverage-homepage',
   template: `
   <leverage-header></leverage-header>
-  <ul>
-  <li *ngFor="let campaign of campaigns">
-  Candidate Name: {{ campaign.candidateName }}
-  <br>
-  Candidate Party: {{ campaign.candidateParty }}
-  <br>
-  Candidate Position: {{ campaign.candidatePosition }}
-  <br>
-  Election Cycle: {{ campaign.electionCycle }}
-  <br>
-  Election Year: {{ campaign.electionYear }}
-  </li>
-  </ul>
+  <div class="jumbotron">
+        <div class="container">
+        <div class="row">
+          <h1 class="text-center home-header">Hello, world!</h1>
+        </div>
+        <div class="row">
+          <p class="text-center">Empower citizens of Philadelphia to use campaign finance data when making informed decisions about who they donate to, who they support, and who they vote for.</p>
+        </div>
+        <div class="row home-buttons">
+          <div class="col-md-6 text-center">
+            <button type="button" routerLink="/candidatelist" class="btn btn-default btn-lg">District Attorney</button>
+          </div>
+          <div class="col-md-6 text-center">
+            <button type="button" routerLink="/candidatelist" class="btn btn-default btn-lg">City Controller</button>
+          </div>
+        </div>
+      </div>
+    </div>
   <leverage-footer></leverage-footer>`,
   styles: [`
 body {
