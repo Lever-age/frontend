@@ -7,9 +7,9 @@ import {DropdownModule} from "ngx-dropdown";
 
 import { leverageroutes } from './homepage.component.routes';
 import { HomepageComponent } from './homepage/homepage.component';
-import { AboutPageComponent } from './aboutpage/aboutpage.component';
-import { FooterComponent } from './appfooter/leveragefooter.component';
-import { HeaderComponent } from './appheader/leverageheader.component';
+import { AboutPageComponent } from './aboutpage/about-page.component';
+import { FooterComponent } from './appfooter/leverage-footer.component';
+import { HeaderComponent } from './appheader/leverage-header.component';
 import { NotFoundComponent } from './notfound/not-found.component';
 import { AppComponent }  from './app.component';
 

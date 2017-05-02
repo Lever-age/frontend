@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var leverage_constants_1 = require('./../../constants/common/leverage.constants');
+var core_1 = require("@angular/core");
+var leverage_constants_1 = require("./../../constants/common/leverage.constants");
 // other import {  } from 'module';
 var CommonProxy = (function () {
     function CommonProxy(leverageConstants) {
@@ -192,11 +192,11 @@ var CommonProxy = (function () {
             };
         }
     };
-    CommonProxy = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [leverage_constants_1.LeverageConstants])
-    ], CommonProxy);
     return CommonProxy;
 }());
+CommonProxy = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [leverage_constants_1.LeverageConstants])
+], CommonProxy);
 exports.CommonProxy = CommonProxy;
 //# sourceMappingURL=common.proxy.js.map

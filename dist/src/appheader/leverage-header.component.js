@@ -45,4 +45,4 @@ HeaderComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], HeaderComponent);
 exports.HeaderComponent = HeaderComponent;
-//# sourceMappingURL=leverageheader.component.js.map
+//# sourceMappingURL=leverage-header.component.js.map

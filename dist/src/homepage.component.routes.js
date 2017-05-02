@@ -1,7 +1,7 @@
 "use strict";
-var homepage_component_1 = require('./homepage/homepage.component');
-var aboutpage_component_1 = require('./aboutpage/aboutpage.component');
-var not_found_component_1 = require('./notfound/not-found.component');
+var homepage_component_1 = require("./homepage/homepage.component");
+var about_page_component_1 = require("./aboutpage/about-page.component");
+var not_found_component_1 = require("./notfound/not-found.component");
 exports.leverageroutes = [
     {
         path: '',
@@ -10,7 +10,7 @@ exports.leverageroutes = [
     },
     {
         path: 'about',
-        component: aboutpage_component_1.AboutPageComponent,
+        component: about_page_component_1.AboutPageComponent,
         pathMatch: 'full'
     },
     {

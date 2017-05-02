@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var common_proxy_1 = require('./../../proxies/common/common.proxy');
+var core_1 = require("@angular/core");
+var common_proxy_1 = require("./../../proxies/common/common.proxy");
 var CommonService = (function () {
     function CommonService(commonProxy) {
         this.commonProxy = commonProxy;
@@ -21,11 +21,11 @@ var CommonService = (function () {
         var str = s;
         return str;
     };
-    CommonService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [common_proxy_1.CommonProxy])
-    ], CommonService);
     return CommonService;
 }());
+CommonService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [common_proxy_1.CommonProxy])
+], CommonService);
 exports.CommonService = CommonService;
 //# sourceMappingURL=common.services.js.map

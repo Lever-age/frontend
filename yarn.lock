@@ -34,7 +34,11 @@
   version "3.4.10"
   resolved "https://registry.yarnpkg.com/@angular/router/-/router-3.4.10.tgz#a466a0918fc2882ece18ca12bd5aea298050e91e"
 
-"@types/jasmine@^2.5.36", "@types/jasmine@^2.5.38":
+"@types/jasmine@2.5.36":
+  version "2.5.36"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.5.36.tgz#6d804b79a57e9380d766a2680e9362c17d9556d2"
+
+"@types/jasmine@^2.5.36":
   version "2.5.47"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.5.47.tgz#bbba9bcf0e95e7890c6f4a47394e8bacaa960eb6"
 
@@ -2364,6 +2368,10 @@ natives@^1.1.0:
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
+
+ngx-dropdown@0.0.22:
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/ngx-dropdown/-/ngx-dropdown-0.0.22.tgz#618871b016899c5c700bf7085c6cfe3ddbf71d25"
 
 node-pre-gyp@^0.6.29:
   version "0.6.34"

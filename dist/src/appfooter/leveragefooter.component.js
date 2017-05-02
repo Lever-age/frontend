@@ -8,19 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
+var core_1 = require("@angular/core");
 var FooterComponent = (function () {
     function FooterComponent() {
     }
-    FooterComponent = __decorate([
-        core_1.Component({
-            selector: 'leverage-footer',
-            template: "\n  <div class=\"footer-container navbar-fixed-bottom\">\n    <div class=\"pull-left\"><p class=\"footer-text\">Leverage</p></div>\n    <div class=\"pull-right\"><p class=\"footer-text\">Contact Us</p></div>\n  </div>\n  ",
-            styles: ["\n.footer-container {\n    width: 100%;\n    background-color: gray;\n    height: 50px;\n}\n.footer-text {\n    height: 50px;\n    line-height: 50px;\n    font-size: 14px;\n    color: #fff;\n    padding-left: 20px;\n    padding-right: 20px;\n}\n"]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], FooterComponent);
     return FooterComponent;
 }());
+FooterComponent = __decorate([
+    core_1.Component({
+        selector: 'leverage-footer',
+        template: "\n  <div class=\"footer-container navbar-fixed-bottom\">\n    <div class=\"pull-left\"><p class=\"footer-text\">Leverage</p></div>\n    <div class=\"pull-right\"><p class=\"footer-text\">Contact Us</p></div>\n  </div>\n  ",
+        styles: ["\n.footer-container {\n    width: 100%;\n    background-color: gray;\n    height: 50px;\n}\n.footer-text {\n    height: 50px;\n    line-height: 50px;\n    font-size: 14px;\n    color: #fff;\n    padding-left: 20px;\n    padding-right: 20px;\n}\n"]
+    }),
+    __metadata("design:paramtypes", [])
+], FooterComponent);
 exports.FooterComponent = FooterComponent;
 //# sourceMappingURL=leveragefooter.component.js.map

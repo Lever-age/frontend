@@ -23,4 +23,4 @@ AboutPageComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], AboutPageComponent);
 exports.AboutPageComponent = AboutPageComponent;
-//# sourceMappingURL=aboutpage.component.js.map
+//# sourceMappingURL=about-page.component.js.map
