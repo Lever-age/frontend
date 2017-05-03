@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
 import { HomepageComponent } from './homepage/homepage.component';
-import { AboutPageComponent } from './aboutpage/aboutpage.component';
-import { FooterComponent } from './appfooter/leveragefooter.component';
-import { HeaderComponent } from './appheader/leverageheader.component';
+import { AboutPageComponent } from './aboutpage/about-page.component';
+import { FooterComponent } from './appfooter/leverage-footer.component';
+import { HeaderComponent } from './appheader/leverage-header.component';
+
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'my-app',
   template: `
-  <leverage-homepage></leverage-homepage>`,
+  <div>
+  	<leverage-header></leverage-header>
+  	<router-outlet></router-outlet>
+  	<leverage-footer></leverage-footer>
+  </div>`,
 })
 export class AppComponent  {
 

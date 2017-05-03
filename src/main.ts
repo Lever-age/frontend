@@ -1,9 +1,9 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { AboutPageComponent } from './aboutpage/aboutpage.component';
+import { AboutPageComponent } from './aboutpage/about-page.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { FooterComponent } from './appfooter/leveragefooter.component';
-import { HeaderComponent } from './appheader/leverageheader.component';
+import { FooterComponent } from './appfooter/leverage-footer.component';
+import { HeaderComponent } from './appheader/leverage-header.component';
 import { AppModule } from './app.module';
 
 platformBrowserDynamic().bootstrapModule(AppModule);

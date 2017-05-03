@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FooterComponent } from '../appfooter/leveragefooter.component';
-import { HeaderComponent } from '../appheader/leverageheader.component';
+import { FooterComponent } from '../appfooter/leverage-footer.component';
+import { HeaderComponent } from '../appheader/leverage-header.component';
 import { CommonService } from './../services/common/common.services';
 import { DataRequest } from './../models/common/common.model';
 import { Campaigns } from './../models/common/campaign.model';
