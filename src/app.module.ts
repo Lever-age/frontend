@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Router, RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
 import {APP_BASE_HREF} from '@angular/common';
 
 // import {DropdownModule} from "ngx-dropdown";
@@ -14,18 +15,20 @@ import { NotFoundComponent } from './notfound/not-found.component';
 import { CandidateListComponent } from './candidatelist/candidatelist.component';
 import { CandidateDetailComponent } from './candidateDetail/candidatedetail.component';
 import { AppComponent }  from './app.component';
+import { CandidateListService } from './candidatelist/service/candidate-list.service';
 
 
 @NgModule({
   imports: [ 
     BrowserModule,
     /*DropdownModule,*/
-    RouterModule.forRoot(leverageroutes)
+    RouterModule.forRoot(leverageroutes),
+    HttpModule
     ],
   declarations: [ AppComponent, HomepageComponent, AboutPageComponent, CandidateListComponent,
    CandidateDetailComponent,
   FooterComponent, HeaderComponent, NotFoundComponent ],
   bootstrap:    [ AppComponent  ],
-  providers: [{provide: APP_BASE_HREF, useValue : '/' }]
+  providers: [{provide: APP_BASE_HREF, useValue : '/' }, CandidateListService]
 })
 export class AppModule { }
