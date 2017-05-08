@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Campaign, Campaigns } from './../models/common/campaign.model';
+import { Campaigns } from './../models/common/campaign.model';
 
-import { CandidateListService } from './service/candidate-list.service';
+import { LeverageApiProxy } from '../proxies/common/leverage-api.proxy';
 
 @Component({
   selector: 'leverage-candidate-list',
@@ -17,7 +17,7 @@ import { CandidateListService } from './service/candidate-list.service';
                 </div>
         </div>
     </div>`,
-    providers: [CandidateListService]
+    providers: [LeverageApiProxy]
 })
 
 export class CandidateListComponent implements OnInit  {
@@ -40,14 +40,11 @@ export class CandidateListComponent implements OnInit  {
         ]
     };
     campaigns: Campaigns[];
-    constructor(private candidateListService: CandidateListService) {}
+    constructor(private leverageApiProxy: LeverageApiProxy) {}
     ngOnInit() {
-        this.candidateListService
+        this.leverageApiProxy
         .getCampagins()
-        .subscribe((data: Campaigns[]) => {
-            console.log('Data', data);
-            this.campaigns = data;
-        });
+        .subscribe((data: Campaigns[]) => this.campaigns = data);
     }
 
 }

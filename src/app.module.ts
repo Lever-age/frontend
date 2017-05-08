@@ -15,7 +15,7 @@ import { NotFoundComponent } from './notfound/not-found.component';
 import { CandidateListComponent } from './candidatelist/candidatelist.component';
 import { CandidateDetailComponent } from './candidateDetail/candidatedetail.component';
 import { AppComponent }  from './app.component';
-import { CandidateListService } from './candidatelist/service/candidate-list.service';
+import { LeverageApiProxy } from './proxies/common/leverage-api.proxy';
 
 
 @NgModule({
@@ -29,6 +29,6 @@ import { CandidateListService } from './candidatelist/service/candidate-list.ser
    CandidateDetailComponent,
   FooterComponent, HeaderComponent, NotFoundComponent ],
   bootstrap:    [ AppComponent  ],
-  providers: [{provide: APP_BASE_HREF, useValue : '/' }, CandidateListService]
+  providers: [{provide: APP_BASE_HREF, useValue : '/' }, LeverageApiProxy]
 })
 export class AppModule { }

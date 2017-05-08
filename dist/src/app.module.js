@@ -23,7 +23,7 @@ var not_found_component_1 = require('./notfound/not-found.component');
 var candidatelist_component_1 = require('./candidatelist/candidatelist.component');
 var candidatedetail_component_1 = require('./candidateDetail/candidatedetail.component');
 var app_component_1 = require('./app.component');
-var candidate_list_service_1 = require('./candidatelist/service/candidate-list.service');
+var leverage_api_proxy_1 = require('./proxies/common/leverage-api.proxy');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -39,7 +39,7 @@ var AppModule = (function () {
                 candidatedetail_component_1.CandidateDetailComponent,
                 leverage_footer_component_1.FooterComponent, leverage_header_component_1.HeaderComponent, not_found_component_1.NotFoundComponent],
             bootstrap: [app_component_1.AppComponent],
-            providers: [{ provide: common_1.APP_BASE_HREF, useValue: '/' }, candidate_list_service_1.CandidateListService]
+            providers: [{ provide: common_1.APP_BASE_HREF, useValue: '/' }, leverage_api_proxy_1.LeverageApiProxy]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

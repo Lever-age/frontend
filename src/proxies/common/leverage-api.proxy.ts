@@ -9,7 +9,7 @@ import { Campaigns } from '../../models/common/campaign.model';
 const LEVERAGE_API: string = 'http://api.leveragecampaignfinance.org';
 
 @Injectable()
-export class CandidateListService {
+export class LeverageApiProxy {
     constructor(private http: Http) {}
 
     getCampagins(): Observable<Campaigns[]> {
