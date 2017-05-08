@@ -14,7 +14,7 @@ export class LeverageApiProxy {
 
     getCampagins(): Observable<Campaigns[]> {
         return this.http
-          .get(LEVERAGE_API + '/campaigns')
+          .get(LEVERAGE_API + '/candidates')
           .map((response: Response) => response.json());
     }
 }
