@@ -12,7 +12,7 @@ import { LeverageApiProxy } from '../proxies/common/leverage-api.proxy';
             <div class="panel panel-default"> 
                 <div class="list-group">
                     <button *ngFor="let campaign of campaigns; let i = index" type="button" routerLink="/candidatedetail" class="list-group-item button-list-item">
-                        <span class="pull-left">{{ campaigns[i].candidate_name }}</span><span class="pull-right">{{ campaigns[i].candidate_position }}</span>
+                        <span class="pull-left">{{ campaigns[i].candidate_name }}</span><span class="pull-right">{{ campaigns[i].campaigns[0].candidate_position }}</span>
                     </button>
                 </div>
         </div>
