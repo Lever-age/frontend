@@ -9,8 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var leverage_api_proxy_1 = require('../proxies/common/leverage-api.proxy');
 var CandidateListComponent = (function () {
-    function CandidateListComponent() {
+    function CandidateListComponent(leverageApiProxy) {
+        this.leverageApiProxy = leverageApiProxy;
         this.campaignObject = {
             campaignId: 1,
             candidateId: 1,
@@ -29,12 +31,19 @@ var CandidateListComponent = (function () {
             ]
         };
     }
+    CandidateListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.leverageApiProxy
+            .getCampagins()
+            .subscribe(function (data) { return _this.campaigns = data; });
+    };
     CandidateListComponent = __decorate([
         core_1.Component({
             selector: 'leverage-candidate-list',
-            template: "\n    <div class=\"container\">\n        <div class=\"row\">\n        <div class=\"bs-example\" data-example-id=\"panel-without-body-with-table\"> \n            <div class=\"panel panel-default\"> \n                <div class=\"list-group\">\n                    <button type=\"button\" routerLink=\"/candidatedetail\" class=\"list-group-item button-list-item\">\n                        <span class=\"pull-left\">Francine Yurchik (D)</span><span class=\"pull-right\">District Attorney</span>\n                    </button>\n                    <button type=\"button\" routerLink=\"/candidatedetail\" class=\"list-group-item button-list-item\">\n                        <span class=\"pull-left\">Francine Yurchik (D)</span><span class=\"pull-right\">District Attorney</span>\n                    </button>\n                    <button type=\"button\" routerLink=\"/candidatedetail\" class=\"list-group-item button-list-item\">\n                        <span class=\"pull-left\">Francine Yurchik (D)</span><span class=\"pull-right\">District Attorney</span>\n                    </button>\n                    <button type=\"button\" routerLink=\"/candidatedetail\" class=\"list-group-item button-list-item\">\n                        <span class=\"pull-left\">Francine Yurchik (D)</span><span class=\"pull-right\">District Attorney</span>\n                    </button>\n                    <button type=\"button\" routerLink=\"/candidatedetail\" class=\"list-group-item button-list-item\">\n                        <span class=\"pull-left\">Francine Yurchik (D)</span><span class=\"pull-right\">District Attorney</span>\n                    </button>\n                </div>\n        </div>\n    </div>"
+            template: "\n    <div class=\"container\">\n        <div class=\"row\">\n        <div class=\"bs-example\" data-example-id=\"panel-without-body-with-table\"> \n            <div class=\"panel panel-default\"> \n                <div class=\"list-group\">\n                    <button *ngFor=\"let campaign of campaigns; let i = index\" type=\"button\" routerLink=\"/candidatedetail\" class=\"list-group-item button-list-item\">\n                        <span class=\"pull-left\">{{ campaigns[i].candidate_name }}</span><span class=\"pull-right\">{{ campaigns[i].campaigns[0].candidate_position }}</span>\n                    </button>\n                </div>\n        </div>\n    </div>",
+            providers: [leverage_api_proxy_1.LeverageApiProxy]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [leverage_api_proxy_1.LeverageApiProxy])
     ], CandidateListComponent);
     return CandidateListComponent;
 }());
