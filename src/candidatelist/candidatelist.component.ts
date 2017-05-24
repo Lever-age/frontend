@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { Campaign, Campaigns } from './../models/common/campaign.model';
+import { Component, OnInit } from '@angular/core';
+import { Campaigns } from './../models/common/campaign.model';
+
+import { LeverageApiProxy } from '../proxies/common/leverage-api.proxy';
 
 @Component({
   selector: 'leverage-candidate-list',
@@ -9,27 +11,16 @@ import { Campaign, Campaigns } from './../models/common/campaign.model';
         <div class="bs-example" data-example-id="panel-without-body-with-table"> 
             <div class="panel panel-default"> 
                 <div class="list-group">
-                    <button type="button" routerLink="/candidatedetail" class="list-group-item button-list-item">
-                        <span class="pull-left">Francine Yurchik (D)</span><span class="pull-right">District Attorney</span>
-                    </button>
-                    <button type="button" routerLink="/candidatedetail" class="list-group-item button-list-item">
-                        <span class="pull-left">Francine Yurchik (D)</span><span class="pull-right">District Attorney</span>
-                    </button>
-                    <button type="button" routerLink="/candidatedetail" class="list-group-item button-list-item">
-                        <span class="pull-left">Francine Yurchik (D)</span><span class="pull-right">District Attorney</span>
-                    </button>
-                    <button type="button" routerLink="/candidatedetail" class="list-group-item button-list-item">
-                        <span class="pull-left">Francine Yurchik (D)</span><span class="pull-right">District Attorney</span>
-                    </button>
-                    <button type="button" routerLink="/candidatedetail" class="list-group-item button-list-item">
-                        <span class="pull-left">Francine Yurchik (D)</span><span class="pull-right">District Attorney</span>
+                    <button *ngFor="let campaign of campaigns; let i = index" type="button" routerLink="/candidatedetail" class="list-group-item button-list-item">
+                        <span class="pull-left">{{ campaigns[i].candidate_name }}</span><span class="pull-right">{{ campaigns[i].campaigns[0].candidate_position }}</span>
                     </button>
                 </div>
         </div>
-    </div>`
+    </div>`,
+    providers: [LeverageApiProxy]
 })
 
-export class CandidateListComponent  {
+export class CandidateListComponent implements OnInit  {
     campaignList: Campaigns[];
     campaignObject: Campaigns = {
         campaignId: 1,
@@ -48,5 +39,12 @@ export class CandidateListComponent  {
             }
         ]
     };
+    campaigns: Campaigns[];
+    constructor(private leverageApiProxy: LeverageApiProxy) {}
+    ngOnInit() {
+        this.leverageApiProxy
+        .getCampagins()
+        .subscribe((data: Campaigns[]) => this.campaigns = data);
+    }
 
 }
