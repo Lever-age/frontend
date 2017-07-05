@@ -22,15 +22,15 @@ export class LeverageHeaderService {
                 dropdown: true,
                 subMenuItem: [
                     {
-                        link: '/candidatelist',
-                        name: 'District Attornery',
+                        link: '/mayorlist',
+                        name: 'Mayor',
                         exact: true,
                         linkactive: 'active',
                         dropdown: false
                     },
                     {
-                        link: '/candidatelist',
-                        name: 'City Controller',
+                        link: '/councilatlarge',
+                        name: 'Council At Large',
                         exact: true,
                         linkactive: 'active',
                         dropdown: false

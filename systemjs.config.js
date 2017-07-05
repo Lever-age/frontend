@@ -11,7 +11,7 @@
     // map tells the System loader where to look for things
     map: {
       // our app is within the app folder
-      app: 'src',
+      app: '/src',
       dist: '/dist/src/',
 
       // angular bundles
@@ -23,23 +23,36 @@
       '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+      '@ngrx': 'npm:@ngrx',
 
       // other libraries
-      'rxjs':                      'npm:rxjs',
-     'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
-     "ngx-dropdown": "node_modules/ngx-dropdown"
+      'rxjs': 'npm:rxjs',
+      'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
+      "ngx-dropdown": "node_modules/ngx-dropdown"
 
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {
       dist: {
-        main: './main.js',
+        main: 'main.js',
         defaultExtension: 'js'
       },
       rxjs: {
         defaultExtension: 'js'
       },
-      "ngx-dropdown": { "main": "index.js", "defaultExtension": "js" }
+      '@ngrx/core': { 
+        main: 'bundles/core.umd.js', 
+        defaultExtension: 'js' 
+      },
+      '@ngrx/store': {
+        main: 'bundles/store.umd.js', 
+        defaultExtension: 'js' 
+      },
+      '@ngrx/store-devtools': {
+        main: 'bundles/store-devtools.umd.js',
+        defaultExtension: 'js'
+      },
+       "ngx-dropdown": { "main": "index.js", "defaultExtension": "js" }
     }
   });
 })(this);
