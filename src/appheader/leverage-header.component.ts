@@ -19,7 +19,7 @@ import { Nav } from '../models/common/nav.model';
               </a>
               <ul *ngIf="item.subMenuItem" class="dropdown-menu">
                 <li *ngFor="let subMenuItems of item.subMenuItem">
-                  <a routerLink="/candidatelist" href="javascript:void(0)">
+                  <a routerLink={{subMenuItems.link}} href="javascript:void(0)">
                     {{subMenuItems.name}}
                   </a>
                 </li>

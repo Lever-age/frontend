@@ -4,7 +4,7 @@ import { FooterComponent } from '../appfooter/leverage-footer.component';
 import { HeaderComponent } from '../appheader/leverage-header.component';
 import { CommonService } from './../services/common/common.services';
 import { DataRequest } from './../models/common/common.model';
-import { Campaigns } from './../models/common/campaign.model';
+import { CampaignInfo } from './../models/common/campaign.model';
 import { CommonProxy } from './../proxies/common/common.proxy';
 import { LeverageConstants } from './../constants/common/leverage.constants';
 
@@ -40,7 +40,7 @@ body {
 providers: [CommonService, CommonProxy, LeverageConstants]
 })
 export class HomepageComponent implements OnInit  {
-    campaigns: Campaigns[];
+    // campaigns: Campaigns[];
     private homepage: string;
     private home: string;
     private finance: string;
@@ -54,6 +54,6 @@ export class HomepageComponent implements OnInit  {
     
     ngOnInit() {
         let r: DataRequest = {request: 'data please'};
-        this.campaigns = this.commonService.getCampaignDataStream(r).campaigns;
+        // this.campaigns = this.commonService.getCampaignDataStream(r).campaigns;
     }
 }

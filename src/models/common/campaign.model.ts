@@ -1,15 +1,19 @@
-export interface Campaign {
-    candidateId: number;
-    candidateName: string;
-    campaigns: Campaigns[];
+// export interface CampaignItem {
+//     campaign: CampaignInfo;
+// }
+
+export interface CampaignInfo {
+    candidate_id: number;
+    candidate_name: string;
+    campaigns: Campaign[];
 }
 
-export interface Campaigns {
+export interface Campaign {
     campaignId: number;
     candidateId: number;
-    candidateName: string;
-    candidateParty: string;
-    candidatePosition: string;
+    candidate_name: string;
+    candidate_party: string;
+    candidate_position: string;
     electionCycle: string;
     electionYear: number;
     campaignSummary: CampaignSummary[];

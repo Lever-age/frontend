@@ -3,7 +3,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { AboutPageComponent } from './aboutpage/about-page.component';
 import { FooterComponent } from './appfooter/leverage-footer.component';
 import { HeaderComponent } from './appheader/leverage-header.component';
-import { CandidateListComponent } from './candidatelist/candidatelist.component';
+import { MayorListComponent } from './candidatelist/mayorlist.component';
+import { CouncilListComponent } from './candidatelist/councilatlargelist.component';
 import { CandidateDetailComponent } from './candidateDetail/candidatedetail.component';
 
 import { Router, RouterModule } from '@angular/router';

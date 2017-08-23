@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { DataRequest, DevParameters } from './../../models/common/common.model';
 import { LeverageConstants } from './../../constants/common/leverage.constants';
-import { Campaign } from './../../models/common/campaign.model';
+import { CampaignInfo } from './../../models/common/campaign.model';
 // other import {  } from 'module';
 
 @Injectable()
@@ -10,13 +10,13 @@ export class CommonProxy {
 
     constructor(private leverageConstants: LeverageConstants) {}
 
-    public getCommonDataStream(r: DataRequest): Campaign {
+    public getCommonDataStream(r: DataRequest) {
         if (this.mockData === true) {
             return this.getMockData(r);
         }
     }
 
-    private getMockData(r: DataRequest): Campaign {
+    private getMockData(r: DataRequest) {
         if (r) {
             return {
                 "candidateId": 1,
@@ -27,7 +27,7 @@ export class CommonProxy {
                         "candidateId": 1,
                         "candidateName": "Matt Wolfe",
                         "candidateParty": "Suprise Party",
-                        "candidatePosition": "Council-At-Large",
+                        "candidate_position": "Council-At-Large",
                         "electionCycle": "General Election",
                         "electionYear": 3000,
                         "campaignSummary": [
