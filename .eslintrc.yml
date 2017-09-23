@@ -1,0 +1,11 @@
+extends: standard
+plugins:
+  - standard
+  - promise
+env:
+  node: false
+  browser: true
+rules:
+  semi:
+    - error
+    - always

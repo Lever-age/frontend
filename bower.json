@@ -1,0 +1,22 @@
+{
+  "name": "leverage-frontend",
+  "authors": [
+    "James Lott <james@lottspot.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "GPLv3",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-beta",
+    "animate.css": "3.5.2"
+  }
+}
