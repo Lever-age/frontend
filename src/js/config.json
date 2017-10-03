@@ -1,0 +1,5 @@
+{
+  "development": {
+    "api_prefix": "http://localhost:5000/api"
+  }
+}
