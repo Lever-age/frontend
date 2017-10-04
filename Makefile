@@ -25,6 +25,10 @@ $(BUILD_PREFIX)/js/app.js: $(JS_SRCS)
 	@parent=$$(dirname "$@"); test -e "$$parent" || mkdir -p "$$parent"
 	$(BIN_PREFIX)/browserify $^ -o $@ -t babelify -t brfs
 
+$(BUILD_PREFIX)/%.html: $(SRC_PREFIX)/html/%.html
+	@parent=$$(dirname "$@"); test -e "$$parent" || mkdir -p "$$parent"
+	cp $< $@
+
 clean:
 	rm -rf $(BUILD_PREFIX)
 
