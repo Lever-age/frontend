@@ -9,15 +9,14 @@ var cfg = allCfg[nodeEnv];
 
 module.exports.cfg = cfg;
 
-
 module.exports.getResource = (endpoint, query) => {
   let apiEndpoint = `${cfg.api_prefix}/${endpoint}?${query}`;
 
   return new Promise((resolve, reject) => {
     request(apiEndpoint, (err, resp, body) => {
-      if(err) reject(err);
+      if (err) reject(err);
 
       return resolve(resp.body);
     });
   });
-}
+};
