@@ -20,3 +20,6 @@ module.exports.getResource = (endpoint, query) => {
     });
   });
 };
+
+module.exports.parseHTML = (htmlString) =>
+  document.createRange().createContextualFragment(htmlString);
