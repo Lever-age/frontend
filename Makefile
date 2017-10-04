@@ -8,11 +8,14 @@ CSS_SRCS      :=                                           \
 	$(VENDOR_PREFIX)/bootstrap/dist/css/bootstrap.min.css    \
 	$(VENDOR_PREFIX)/animate.css/animate.min.css
 JS_SRCS       :=                                           \
-	$(SRC_PREFIX)/js/core.js
+	$(SRC_PREFIX)/js/core.js                                 \
+	$(SRC_PREFIX)/js/entrypoint.js                           \
+	$(SRC_PREFIX)/js/index.js
 
 BUILD_FILES   :=                                           \
 	$(BUILD_PREFIX)/css/style.css                            \
-	$(BUILD_PREFIX)/js/app.js
+	$(BUILD_PREFIX)/js/app.js                                \
+	$(BUILD_PREFIX)/index.html
 
 site: $(BUILD_FILES)
 
@@ -29,7 +32,10 @@ $(BUILD_PREFIX)/%.html: $(SRC_PREFIX)/html/%.html
 	@parent=$$(dirname "$@"); test -e "$$parent" || mkdir -p "$$parent"
 	cp $< $@
 
+test:
+	npm test
+
 clean:
 	rm -rf $(BUILD_PREFIX)
 
-.PHONY: site
+.PHONY: site test clean
