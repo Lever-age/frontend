@@ -3,7 +3,7 @@ plugins:
   - standard
   - promise
 env:
-  node: false
+  node: true
   browser: true
 rules:
   semi:
