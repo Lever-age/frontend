@@ -19,7 +19,7 @@ module.exports.getResource = (endpoint, params = {}) => {
     request(apiEndpoint, (err, resp, body) => {
       if (err) reject(err);
 
-      return resolve(resp.body);
+      return resolve(JSON.parse(body));
     });
   });
 };
