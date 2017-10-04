@@ -9,8 +9,11 @@ var cfg = allCfg[nodeEnv];
 
 module.exports.cfg = cfg;
 
-module.exports.getResource = (endpoint, query) => {
-  let apiEndpoint = `${cfg.api_prefix}/${endpoint}?${query}`;
+module.exports.getResource = (endpoint, params) => {
+  let qstring = Object.keys(params).reduce((qstrPart, curKey, i) =>
+    `${i > 0 ? qstrPart + '&' : ''}${encodeURIComponent(curKey)}=${encodeURIComponent(params[curKey])}`
+  );
+  let apiEndpoint = `${cfg.api_prefix}/${endpoint}?${qstring}`;
 
   return new Promise((resolve, reject) => {
     request(apiEndpoint, (err, resp, body) => {
