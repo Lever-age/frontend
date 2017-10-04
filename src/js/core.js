@@ -32,9 +32,9 @@ module.exports.getResource = (endpoint, params = {}) => {
 
   return new Promise((resolve, reject) => {
     request(apiEndpoint, (err, resp, body) => {
-      if(err) reject(err);
+      if (err) reject(err);
 
       return resolve(resp.body);
     });
   });
-}
+};
