@@ -21,6 +21,7 @@ $(BUILD_PREFIX)/css/style.css: $(CSS_SRCS)
 	cat $^ > $@
 
 $(BUILD_PREFIX)/js/app.js: $(JS_SRCS)
+	$(BIN_PREFIX)/eslint $^
 	@parent=$$(dirname "$@"); test -e "$$parent" || mkdir -p "$$parent"
 	$(BIN_PREFIX)/browserify $^ -o $@ -t babelify -t brfs
 
