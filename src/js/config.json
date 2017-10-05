@@ -1,5 +1,6 @@
 {
   "development": {
-    "api_prefix": "http://localhost:5000/api"
+    "api_prefix": "http://localhost:5000/api",
+    "rootPage": "index.html"
   }
 }
