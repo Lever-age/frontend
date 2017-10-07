@@ -1,12 +1,12 @@
 
-var fs = require('fs');
-var path = require('path');
-var request = require('request');
-var Mustache = require('mustache');
+const fs = require('fs');
+const path = require('path');
+const request = require('request');
+const Mustache = require('mustache');
 
-var allCfg = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json')));
-var nodeEnv = process.env.NODE_ENV || 'development';
-var cfg = allCfg[nodeEnv];
+let allCfg = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json')));
+let nodeEnv = process.env.NODE_ENV || 'development';
+let cfg = allCfg[nodeEnv];
 
 module.exports.cfg = cfg;
 module.exports.Mustache = Mustache;
