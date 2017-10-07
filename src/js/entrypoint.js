@@ -1,5 +1,6 @@
 var entrypointMap = {
-  'index.html': require('./index')
+  'index.html': require('./index'),
+  'candidate-detail.html': require('./candidate-detail')
 };
 
 var path = require('path');
