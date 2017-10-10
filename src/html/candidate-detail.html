@@ -1,30 +1,52 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Leverage</title>
     <link rel='stylesheet' href='/css/style.css'>
   </head>
-
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col col-md-12 text-center">
-          <h3>Leverage</h3>
-        </div>
-        <div class="col col-md-12" id="pageContent">
-          Please wait...
-        </div>
-      </div>
-    </div>
-    <script type='text/template' id='mustache-template'>
-      {{#candidate}}
-        Name: {{name_full}}<br>
-        Total Money Spent: ${{total_money_spent}}<br>
-        Total Monies Raised: ${{total_money_donated}}<br>
-        <!-- Name: {{name_first}}<br>
-        Name: {{name_first}}<br>
-        Name: {{name_first}}<br>
-        Name: {{name_first}}<br> -->
-      {{/candidate}}
+
+    <nav class='navbar navbar-default' id='navbar'>
+      <section class='container-fluid'>
+        <section class='navbar-header' id='nav-header-block'>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-links-block" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class='navbar-brand' href='/'>Leverage</a>
+        </section>
+        <section class='collapse navbar-collapse' id='nav-links-block'>
+          <ul class='nav navbar-nav' id='nav-links'>
+            <li><a href='/getting-started.html'>Getting started</a></li>
+            <li><a href='/'>Discover data</a></li>
+            <li><a href='/about.html'>About Leverage</a></li>
+            <li><a href='/feedback.html'>Feedback</a></li>
+          </ul>
+        </section>
+      </section>
+    </nav>
+
+    <section class='container-fluid' id='pageContent'>
+       Please wait...
+    </section>
+
+    <script id='candidateTpl' type='text/template'>
+      <header class='page-header'>
+        <h1 id='candidate-name'></h1>
+      </header>
+
+      <section class='' id='campaign'>
+          <section class='row text-center'>
+            <section class='col-md-4'>
+              <p>Total Money Spent</p>
+              <p class='h4'>${{ total_money_spent }}</p>
+            </section>
+            <section class='col-md-4'>
+              <p>Total Money Raised</p>
+              <p class='h4'>${{ total_money_donated }}</p>
+            </section>
+          </section>
     </script>
     <script src='/js/app.js'></script>
   </body>

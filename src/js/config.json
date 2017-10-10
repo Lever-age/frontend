@@ -5,7 +5,10 @@
     "pages": {
       "index.html": {},
       "race-detail.html": {},
-      "candidate-detail.html": {}
+      "candidate-detail.html": {
+        "mainContainer": "pageContent",
+        "mainTemplateId": "candidateTpl"
+      }
     }
   }
 }
