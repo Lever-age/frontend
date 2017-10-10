@@ -29,7 +29,8 @@
     "eslint-plugin-node": "5.2.0",
     "eslint-plugin-promise": "3.5.0",
     "eslint-plugin-standard": "3.0.1",
-    "request": "^2.83.0"
+    "mustache": "2.3.0",
+    "request": "2.83.0"
   },
   "devDependencies": {
     "http-server": "0.10.0"
