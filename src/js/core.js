@@ -1,13 +1,15 @@
 
-var fs = require('fs');
-var path = require('path');
-var request = require('request');
+const fs = require('fs');
+const path = require('path');
+const request = require('request');
+const Mustache = require('mustache');
 
-var allCfg = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json')));
-var nodeEnv = process.env.NODE_ENV || 'development';
-var cfg = allCfg[nodeEnv];
+let allCfg = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json')));
+let nodeEnv = process.env.NODE_ENV || 'development';
+let cfg = allCfg[nodeEnv];
 
 module.exports.cfg = cfg;
+module.exports.Mustache = Mustache;
 
 module.exports.getResource = (endpoint, params = {}) => {
   let qstring = Object.keys(params).reduce((qstrPart, curKey, i) =>
@@ -21,7 +23,21 @@ module.exports.getResource = (endpoint, params = {}) => {
 
       return resolve(JSON.parse(body));
     });
-  });
+  }).catch((err) => err);
+};
+
+module.exports.handleError = (err, containerId, customTitle = 'Server Error', customMessage = 'An error has occured!') => {
+  document.getElementById(containerId).innerHTML = customMessage;
+  document.title = customTitle;
+
+  return err;
+};
+
+module.exports.getUrlParameter = (name) => {
+  name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+  let regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+  let results = regex.exec(location.search);
+  return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
 module.exports.parseHTML = (htmlString) =>
