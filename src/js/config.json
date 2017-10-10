@@ -1,6 +1,11 @@
 {
   "development": {
     "api_prefix": "http://localhost:5000/api",
-    "rootPage": "index.html"
+    "rootPage": "index.html",
+    "pages": {
+      "index.html": {},
+      "race-detail.html": {},
+      "candidate-detail.html": {}
+    }
   }
 }
