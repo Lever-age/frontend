@@ -40,5 +40,28 @@ module.exports.getUrlParameter = (name) => {
   return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
 
-module.exports.parseHTML = (htmlString) =>
-  document.createRange().createContextualFragment(htmlString);
+module.exports.parseHTML = parseHTML;
+
+module.exports.renderTemplate = (id, context = {}) => {
+  let template;
+  try {
+    template = document.getElementById(id).innerHTML;
+  } catch (e) {
+    template = '';
+  }
+  return parseHTML(Mustache.render(template, context));
+};
+
+module.exports.fillContainer = (id, nodeTree) => {
+  let container = document.getElementById(id);
+  if (container) {
+    while (container.hasChildNodes()) {
+      container.removeChild(container.firstChild);
+    }
+    container.appendChild(nodeTree);
+  }
+};
+
+function parseHTML (htmlString) {
+  return document.createRange().createContextualFragment(htmlString);
+}
