@@ -32,21 +32,23 @@
     </section>
 
     <script id='candidateTpl' type='text/template'>
+      {{#candidate}}
       <header class='page-header'>
-        <h1 id='candidate-name'></h1>
+        <h1 id='candidate-name'>{{name_full}}</h1>
       </header>
 
       <section class='' id='campaign'>
-          <section class='row text-center'>
-            <section class='col-md-4'>
-              <p>Total Money Spent</p>
-              <p class='h4'>${{ total_money_spent }}</p>
-            </section>
-            <section class='col-md-4'>
-              <p>Total Money Raised</p>
-              <p class='h4'>${{ total_money_donated }}</p>
-            </section>
+        <section class='row text-center'>
+          <section class='col-md-4'>
+            <p>Total Money Spent</p>
+            <p class='h4'>${{ total_money_spent }}</p>
           </section>
+          <section class='col-md-4'>
+            <p>Total Money Raised</p>
+            <p class='h4'>${{ total_money_donated }}</p>
+          </section>
+        </section>
+      {{/candidate}}
     </script>
     <script src='/js/app.js'></script>
   </body>
