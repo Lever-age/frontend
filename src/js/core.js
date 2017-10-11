@@ -33,6 +33,8 @@ module.exports.handleError = (err, containerId, customTitle = 'Server Error', cu
   return err;
 };
 
+module.exports.getPageName = () => path.basename(window.location.pathname) || cfg.rootPage;
+
 module.exports.getUrlParameter = (name) => {
   name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
   let regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
