@@ -45,13 +45,12 @@ module.exports.getUrlParameter = (name) => {
 module.exports.parseHTML = parseHTML;
 
 module.exports.renderTemplate = (id, context = {}) => {
-  let template;
-  try {
-    template = document.getElementById(id).innerHTML;
-  } catch (e) {
-    template = '';
+  let template = document.getElementById(id);
+  if (template) {
+    return parseHTML(Mustache.render(template.innerHTML, context));
+  } else {
+    return null;
   }
-  return parseHTML(Mustache.render(template, context));
 };
 
 module.exports.fillContainer = (id, nodeTree) => {
