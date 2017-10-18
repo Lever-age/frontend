@@ -10,13 +10,13 @@ CSS_SRCS      :=                                           \
 JS_SRCS       :=                                           \
 	$(SRC_PREFIX)/js/core.js                                 \
 	$(SRC_PREFIX)/js/entrypoint.js                           \
-	$(SRC_PREFIX)/js/candidate-detail.js                      \
+	$(SRC_PREFIX)/js/candidate-detail.js                     \
 	$(SRC_PREFIX)/js/index.js
 
 BUILD_FILES   :=                                           \
 	$(BUILD_PREFIX)/css/style.css                            \
 	$(BUILD_PREFIX)/js/app.js                                \
-	$(BUILD_PREFIX)/index.html                                \
+	$(BUILD_PREFIX)/index.html                               \
 	$(BUILD_PREFIX)/candidate-detail.html
 
 site: $(BUILD_FILES)
