@@ -2,8 +2,17 @@
   "development": {
     "api_prefix": "http://127.0.0.1:5000/api",
     "rootPage": "index.html",
+    "pathnames": {
+      "raceList": "/index.html",
+      "raceDetail": ""
+    },
     "pages": {
-      "index.html": {},
+      "index.html": {
+        "resource": "races",
+        "renderMap": [
+          {"template": "races-template", "container": "races-container"}
+        ]
+      },
       "race-detail.html": {},
       "candidate-detail.html": {}
     }
