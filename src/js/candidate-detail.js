@@ -1,8 +1,7 @@
 
-let html = document.getElementById('mustache-template').innerHTML;
-let htmlContainer = 'pageContent';
-
 module.exports = (core) => {
+  let html = document.getElementById('mustache-template').innerHTML;
+  let htmlContainer = 'pageContent';
   let slug = core.getUrlParameter('slug') || window.location.pathname.split('/')[2];
 
   core.getResource('candidates', { candidate_slug: slug }).then((candidate) => {
