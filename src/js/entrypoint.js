@@ -6,4 +6,4 @@ let entrypointMap = {
 const core = require('./core');
 let entrypoint = entrypointMap[core.getPageName()] || (() => undefined);
 
-entrypoint(core);
+window.onload = () => entrypoint(core);
