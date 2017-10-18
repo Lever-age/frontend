@@ -5,49 +5,77 @@
   </head>
   <body>
 
-    <nav class='navbar navbar-default' id='navbar'>
-      <section class='container-fluid'>
-        <section class='navbar-header' id='nav-header-block'>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-links-block" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class='navbar-brand' href='/'>Leverage</a>
-        </section>
-        <section class='collapse navbar-collapse' id='nav-links-block'>
-          <ul class='nav navbar-nav' id='nav-links'>
-            <li><a href='/getting-started.html'>Getting started</a></li>
-            <li><a href='/'>Discover data</a></li>
-            <li><a href='/about.html'>About Leverage</a></li>
-            <li><a href='/feedback.html'>Feedback</a></li>
-          </ul>
-        </section>
-      </section>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Leverage</a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="#">Candidates</a>
+          <a class="nav-item nav-link" href="#">Races</a>
+        </div>
+      </div>
     </nav>
+    <header class='col-12 page-header'>
+      <h1>Candidate Details</h1>
+    </header>
 
-    <section class='container-fluid' id='pageContent'>
+    <section class='container' id='pageContent'>
        Please wait...
     </section>
 
+    <footer class="text-center">
+      Made with &#9829; by Code for Philly.
+    </footer>
     <script id='candidateTpl' type='text/template'>
       {{#candidate}}
-      <header class='page-header'>
-        <h1 id='candidate-name'>{{name_full}}</h1>
-      </header>
+        <header class='text-center'>
+          <h3 id='candidate-name'>{{name_full}}</h3>
+        </header>
 
-      <section class='' id='campaign'>
-        <section class='row text-center'>
-          <section class='col-md-4'>
-            <p>Total Money Spent</p>
-            <p class='h4'>${{ total_money_spent }}</p>
+        <header class='page-header'>
+          <h1>Contributions</h1>
+        </header>
+          <section class='' id='campaign'>
+            <section class='row text-center'>
+              <section class='col-md-4'>
+                <p>Total Money Raised</p>
+                <p class='h4'>${{ total_money_donated }}</p>
+              </section>
+              <section class='col-md-4'>
+                <p>Top Contributors</p>
+                <p class='h4'>${{ total_money_spent }}</p>
+              </section>
+            </section>
+            <section class='row text-center'>
+              <section class='col-md-4'>
+                <p>Total Money Raised Philly</p>
+                <p class='h4'>${{ total_money_in_philly }}</p>
+              </section>
+              <section class='col-md-4'>
+                <p>Total Money Raised Outside of Philly</p>
+                <p class='h4'>${{ total_money_out_philly }}</p>
+              </section>
+            </section>
+            <section class='row text-center'>
+              <section class='col-md-4'>
+                <p>Total Money In PA</p>
+                <p class='h4'>${{ total_money_in_pa }}</p>
+              </section>
+              <section class='col-md-4'>
+                <p>Total Money Outside of PA</p>
+                <p class='h4'>${{ total_money_out_pa }}</p>
+              </section>
+            </section>
+            <section class='row text-center'>
+              <section class='col-md-4'>
+                <p>Contributions by Zip Code</p>
+                <p class='h4'></p>
+              </section>
+            </section>
           </section>
-          <section class='col-md-4'>
-            <p>Total Money Raised</p>
-            <p class='h4'>${{ total_money_donated }}</p>
-          </section>
-        </section>
       {{/candidate}}
     </script>
     <script src='/js/app.js'></script>
