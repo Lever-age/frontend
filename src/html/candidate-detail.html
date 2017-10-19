@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Leverage - Candidate Details</title>
     <link rel='stylesheet' href='/css/style.css'>
   </head>
   <body>
@@ -19,63 +20,81 @@
       </div>
     </nav>
     <header class='col-12 page-header'>
-      <h1>Candidate Details</h1>
+      <h2>Candidate Details</h2>
     </header>
 
-    <section class='container' id='pageContent'>
+    <main class='container' id='pageContent'>
        Please wait...
-    </section>
-
-    <footer class="text-center">
-      Made with &#9829; by Code for Philly.
+    </main>
+    <footer class="footer">
+      <div class="container-fluid text-center bg-dark text-white mt-5 py-3">
+          Made with &#9829; by Code for Philly.
+      </div>
     </footer>
-    <script id='candidateTpl' type='text/template'>
+    <script id='notFoundTemplate' type='text/template'>
+      <div class="py-5 mt-2 mb-5">
+        <div class="alert alert-warning">
+          <h4 class="alert-heading">Not Found!</h4>
+          Oops! Candidate not found or invalid candidate selected!
+        </div>
+      </div>
+    </script>
+    <script id='errorTemplate' type='text/template'>
+      <div class="py-5 mt-2 mb-5">
+        <div class="alert alert-danger">
+          <h4 class="alert-heading">Internal Error!</h4>
+          Oops! You broke the internet!
+        </div>
+      </div>
+    </script>
+    <script id='candidateTemplate' type='text/template'>
       {{#candidate}}
         <header class='text-center'>
           <h3 id='candidate-name'>{{name_full}}</h3>
         </header>
 
         <header class='page-header'>
-          <h1>Contributions</h1>
+          <h3>Contributions</h3>
         </header>
-          <section class='' id='campaign'>
-            <section class='row text-center'>
-              <section class='col-md-4'>
-                <p>Total Money Raised</p>
-                <p class='h4'>${{ total_money_donated }}</p>
-              </section>
-              <section class='col-md-4'>
-                <p>Top Contributors</p>
-                <p class='h4'>${{ total_money_spent }}</p>
-              </section>
-            </section>
-            <section class='row text-center'>
-              <section class='col-md-4'>
-                <p>Total Money Raised Philly</p>
-                <p class='h4'>${{ total_money_in_philly }}</p>
-              </section>
-              <section class='col-md-4'>
-                <p>Total Money Raised Outside of Philly</p>
-                <p class='h4'>${{ total_money_out_philly }}</p>
-              </section>
-            </section>
-            <section class='row text-center'>
-              <section class='col-md-4'>
-                <p>Total Money In PA</p>
-                <p class='h4'>${{ total_money_in_pa }}</p>
-              </section>
-              <section class='col-md-4'>
-                <p>Total Money Outside of PA</p>
-                <p class='h4'>${{ total_money_out_pa }}</p>
-              </section>
-            </section>
-            <section class='row text-center'>
-              <section class='col-md-4'>
-                <p>Contributions by Zip Code</p>
-                <p class='h4'></p>
-              </section>
-            </section>
-          </section>
+            <div class="card">
+              <div class="row card-body">
+                <div class='col-md-6 text-center'>
+                  <p>Total Money Raised</p>
+                  <p class='h4'>{{ total_money_donated }}</p>
+                </div>
+                <div class='col-md-6 text-center'>
+                  <p>Top Contributors</p>
+                  <p class='h4'>TBA</p>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix">&nbsp;</div>
+            <div class="card">
+              <div class="row card-body">
+                <div class='col-md-6 text-center'>
+                  <p>Total Money Raised Philly</p>
+                  <p class='h4'>{{ total_money_in_philly }}</p>
+                </div>
+                <div class='col-md-6 text-center'>
+                  <p>Total Money Raised Outside of Philly</p>
+                  <p class='h4'>{{ total_money_out_philly }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix">&nbsp;</div>
+            <div class="card">
+              <div class="row card-body">
+                <div class='col-md-6 text-center'>
+                  <p>Total Money In PA</p>
+                  <p class='h4'>{{ total_money_in_pa }}</p>
+                </div>
+                <div class='col-md-6 text-center'>
+                  <p>Total Money Outside of PA</p>
+                  <p class='h4'>{{ total_money_out_pa }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
       {{/candidate}}
     </script>
     <script src='/js/app.js'></script>

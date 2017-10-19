@@ -1,18 +1,24 @@
 
 module.exports = (core) => {
-  let htmlFileName = __filename.split('/').pop().replace('.js', '.html');
   let slug = core.getUrlParameter('slug') || window.location.pathname.split('/')[2];
-  let pageCfg = core.cfg.pages[htmlFileName];
+  let pageCfg = core.cfg.pages[core.cfg.pathnames.candidateDetail];
 
   core.getResource('candidates', { candidate_slug: slug }).then((candidate) => {
     if (candidate.data[0]) {
-      console.log(candidate.data[0]);
+      let candidateData = candidate.data[0];
 
-      candidate.data[0].name_full = `${candidate.data[0].name_first}  ${candidate.data[0].name_last}`;
-      let nodes = core.renderTemplate(pageCfg.mainTemplateId, { candidate: candidate.data[0] });
+      candidateData['total_money_donated'] = core.formatCurrency(candidateData['total_money_donated']);
+      candidateData['total_money_in_pa'] = core.formatCurrency(candidateData['total_money_in_pa']);
+      candidateData['total_money_in_philly'] = core.formatCurrency(candidateData['total_money_in_philly']);
+      candidateData['total_money_out_pa'] = core.formatCurrency(candidateData['total_money_out_pa']);
+      candidateData['total_money_out_philly'] = core.formatCurrency(candidateData['total_money_out_philly']);
+
+      candidateData.name_full = `${candidateData.name_first}  ${candidateData.name_last}`;
+      let nodes = core.renderTemplate(pageCfg.mainTemplateId, { candidate: candidateData });
       core.fillContainer(pageCfg.mainContainer, nodes);
     } else {
-      core.fillContainer(pageCfg.mainContainer, 'Candidate not found');
+      let nodes = core.renderTemplate(pageCfg.notFoundTemplateId, {});
+      core.fillContainer(pageCfg.mainContainer, nodes);
     }
-  }).catch((err) => core.handleError(err, pageCfg.mainContainer));
+  }).catch((err) => core.handleError(err, pageCfg));
 };
