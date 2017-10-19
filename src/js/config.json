@@ -5,7 +5,7 @@
     "pathnames": {
       "raceList": "/index.html",
       "raceDetail": "",
-      "candidateDetail": "candidate-detail.html"
+      "candidateDetail": "/candidate-detail.html"
     },
     "pages": {
       "index.html": {

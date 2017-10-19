@@ -1,7 +1,7 @@
 
 module.exports = (core) => {
   let slug = core.getUrlParameter('slug') || window.location.pathname.split('/')[2];
-  let pageCfg = core.cfg.pages[core.cfg.pathnames.candidateDetail];
+  let pageCfg = core.cfg.pages[core.getPageName()];
 
   core.getResource('candidates', { candidate_slug: slug }).then((candidate) => {
     if (candidate.data[0]) {
