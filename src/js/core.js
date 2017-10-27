@@ -26,9 +26,9 @@ module.exports.getResource = (endpoint, params = {}) => {
   }).catch((err) => err);
 };
 
-module.exports.handleError = (err, containerId, customTitle = 'Server Error', customMessage = 'An error has occured!') => {
-  document.getElementById(containerId).innerHTML = customMessage;
-  document.title = customTitle;
+module.exports.handleError = (err, pageCfg, customTitle = 'Server Error', customMessage = 'An error has occured!') => {
+  let nodes = renderTemplate(pageCfg.errorTemplateId, {});
+  fillContainer(pageCfg.mainContainer, nodes);
 
   return err;
 };
@@ -44,7 +44,7 @@ module.exports.getUrlParameter = (name) => {
 
 module.exports.parseHTML = parseHTML;
 
-module.exports.renderTemplate = (id, context = {}) => {
+function renderTemplate (id, context = {}) {
   let template = document.getElementById(id);
   if (template) {
     return parseHTML(Mustache.render(template.innerHTML, context));
@@ -52,8 +52,9 @@ module.exports.renderTemplate = (id, context = {}) => {
     return null;
   }
 };
+module.exports.renderTemplate = renderTemplate;
 
-module.exports.fillContainer = (id, nodeTree) => {
+function fillContainer (id, nodeTree) {
   let container = document.getElementById(id);
   if (container) {
     while (container.hasChildNodes()) {
@@ -61,6 +62,11 @@ module.exports.fillContainer = (id, nodeTree) => {
     }
     container.appendChild(nodeTree);
   }
+};
+module.exports.fillContainer = fillContainer;
+
+module.exports.formatCurrency = (value = 0) => {
+  return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
 };
 
 function parseHTML (htmlString) {

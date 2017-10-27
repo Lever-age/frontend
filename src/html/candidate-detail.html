@@ -1,29 +1,100 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Leverage</title>
+    <title>Leverage - Candidate Details</title>
     <link rel='stylesheet' href='/css/style.css'>
   </head>
-
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col col-md-12 text-center">
-          <h3>Leverage</h3>
-        </div>
-        <div class="col col-md-12" id="pageContent">
-          Please wait...
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Leverage</a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link active" href="#">Candidates</a>
+          <a class="nav-item nav-link" href="#">Races</a>
         </div>
       </div>
-    </div>
-    <script type='text/template' id='mustache-template'>
+    </nav>
+    <header class='col-12 page-header'>
+      <h2>Candidate Details</h2>
+    </header>
+
+    <main class='container' id='pageContent'>
+       Please wait...
+    </main>
+    <footer class="footer">
+      <div class="container-fluid text-center bg-dark text-white mt-5 py-3">
+          Made with &#9829; by Code for Philly.
+      </div>
+    </footer>
+    <script id='notFoundTemplate' type='text/template'>
+      <div class="py-5 mt-2 mb-5">
+        <div class="alert alert-warning">
+          <h4 class="alert-heading">Not Found!</h4>
+          Oops! Candidate not found or invalid candidate selected!
+        </div>
+      </div>
+    </script>
+    <script id='errorTemplate' type='text/template'>
+      <div class="py-5 mt-2 mb-5">
+        <div class="alert alert-danger">
+          <h4 class="alert-heading">Internal Error!</h4>
+          Oops! You broke the internet!
+        </div>
+      </div>
+    </script>
+    <script id='candidateTemplate' type='text/template'>
       {{#candidate}}
-        Name: {{name_full}}<br>
-        Total Money Spent: ${{total_money_spent}}<br>
-        Total Monies Raised: ${{total_money_donated}}<br>
-        <!-- Name: {{name_first}}<br>
-        Name: {{name_first}}<br>
-        Name: {{name_first}}<br>
-        Name: {{name_first}}<br> -->
+        <header class='text-center'>
+          <h3 id='candidate-name'>{{name_full}}</h3>
+        </header>
+
+        <header class='page-header'>
+          <h3>Contributions</h3>
+        </header>
+            <div class="card">
+              <div class="row card-body">
+                <div class='col-md-6 text-center'>
+                  <p>Total Money Raised</p>
+                  <p class='h4'>{{ total_money_donated }}</p>
+                </div>
+                <div class='col-md-6 text-center'>
+                  <p>Top Contributors</p>
+                  <p class='h4'>TBA</p>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix">&nbsp;</div>
+            <div class="card">
+              <div class="row card-body">
+                <div class='col-md-6 text-center'>
+                  <p>Total Money Raised Philly</p>
+                  <p class='h4'>{{ total_money_in_philly }}</p>
+                </div>
+                <div class='col-md-6 text-center'>
+                  <p>Total Money Raised Outside of Philly</p>
+                  <p class='h4'>{{ total_money_out_philly }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix">&nbsp;</div>
+            <div class="card">
+              <div class="row card-body">
+                <div class='col-md-6 text-center'>
+                  <p>Total Money In PA</p>
+                  <p class='h4'>{{ total_money_in_pa }}</p>
+                </div>
+                <div class='col-md-6 text-center'>
+                  <p>Total Money Outside of PA</p>
+                  <p class='h4'>{{ total_money_out_pa }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
       {{/candidate}}
     </script>
     <script src='/js/app.js'></script>

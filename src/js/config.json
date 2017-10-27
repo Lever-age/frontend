@@ -4,7 +4,8 @@
     "rootPage": "index.html",
     "pathnames": {
       "raceList": "/index.html",
-      "raceDetail": ""
+      "raceDetail": "",
+      "candidateDetail": "/candidate-detail.html"
     },
     "pages": {
       "index.html": {
@@ -14,7 +15,12 @@
         ]
       },
       "race-detail.html": {},
-      "candidate-detail.html": {}
+      "candidate-detail.html": {
+        "mainContainer": "pageContent",
+        "mainTemplateId": "candidateTemplate",
+        "notFoundTemplateId": "notFoundTemplate",
+        "errorTemplateId": "errorTemplate"
+      }
     }
   }
 }

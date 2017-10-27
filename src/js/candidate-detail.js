@@ -1,16 +1,24 @@
 
 module.exports = (core) => {
-  let html = document.getElementById('mustache-template').innerHTML;
-  let htmlContainer = 'pageContent';
   let slug = core.getUrlParameter('slug') || window.location.pathname.split('/')[2];
+  let pageCfg = core.cfg.pages[core.getPageName()];
 
   core.getResource('candidates', { candidate_slug: slug }).then((candidate) => {
-    console.log(candidate.data[0]);
+    if (candidate.data[0]) {
+      let candidateData = candidate.data[0];
 
-    candidate.data[0].name_full = `${candidate.data[0].name_first}  ${candidate.data[0].name_last}`;
+      candidateData['total_money_donated'] = core.formatCurrency(candidateData['total_money_donated']);
+      candidateData['total_money_in_pa'] = core.formatCurrency(candidateData['total_money_in_pa']);
+      candidateData['total_money_in_philly'] = core.formatCurrency(candidateData['total_money_in_philly']);
+      candidateData['total_money_out_pa'] = core.formatCurrency(candidateData['total_money_out_pa']);
+      candidateData['total_money_out_philly'] = core.formatCurrency(candidateData['total_money_out_philly']);
 
-    let output = core.Mustache.render(html, { candidate: candidate.data[0] });
-    document.getElementById(htmlContainer).innerHTML = output;
-    document.title = candidate.data[0].name_full;
-  }).catch((err) => core.handleError(err, htmlContainer));
+      candidateData.name_full = `${candidateData.name_first}  ${candidateData.name_last}`;
+      let nodes = core.renderTemplate(pageCfg.mainTemplateId, { candidate: candidateData });
+      core.fillContainer(pageCfg.mainContainer, nodes);
+    } else {
+      let nodes = core.renderTemplate(pageCfg.notFoundTemplateId, {});
+      core.fillContainer(pageCfg.mainContainer, nodes);
+    }
+  }).catch((err) => core.handleError(err, pageCfg));
 };
