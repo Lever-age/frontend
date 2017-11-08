@@ -2,20 +2,21 @@
   "development": {
     "api_prefix": "http://127.0.0.1:5000/api",
     "pageIdMeta": "pageName",
-    "pathnames": {
-      "raceList": "/index.html",
-      "raceDetail": "",
-      "candidateDetail": "/candidate-detail.html"
-    },
     "pages": {
       "raceList": {
+        "path": "/index.html",
+        "displayName": "Home",
         "resource": "races",
         "renderMap": [
           {"template": "races-template", "container": "races-container"}
         ]
       },
-      "raceDetail": {},
+      "raceDetail": {
+        "path": ""
+      },
       "candidateDetail": {
+        "path": "/candidate-detail.html",
+        "displayName": "Candidates",
         "mainContainer": "pageContent",
         "mainTemplateId": "candidateTemplate",
         "notFoundTemplateId": "notFoundTemplate",
