@@ -8,14 +8,14 @@
       "candidateDetail": "/candidate-detail.html"
     },
     "pages": {
-      "index": {
+      "raceList": {
         "resource": "races",
         "renderMap": [
           {"template": "races-template", "container": "races-container"}
         ]
       },
-      "race-detail.html": {},
-      "candidate-detail": {
+      "raceDetail": {},
+      "candidateDetail": {
         "mainContainer": "pageContent",
         "mainTemplateId": "candidateTemplate",
         "notFoundTemplateId": "notFoundTemplate",
