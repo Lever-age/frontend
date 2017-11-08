@@ -8,6 +8,13 @@ let allCfg = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json')));
 let nodeEnv = process.env.NODE_ENV || 'development';
 let cfg = allCfg[nodeEnv];
 
+let tmplMap = {
+  notFoundTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'not-found-template.mustache')),
+  errorTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'error-template.mustache')),
+  candidateTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'candidate-template.mustache')),
+  racesTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'races-template.mustache'))
+};
+
 module.exports.cfg = cfg;
 module.exports.Mustache = Mustache;
 
@@ -45,9 +52,10 @@ module.exports.getUrlParameter = (name) => {
 module.exports.parseHTML = parseHTML;
 
 function renderTemplate (id, context = {}) {
-  let template = document.getElementById(id);
+  let template = tmplMap[id];
   if (template) {
-    return parseHTML(Mustache.render(template.innerHTML, context));
+    let templateString = template.toString();
+    return parseHTML(Mustache.render(templateString, context));
   } else {
     return null;
   }

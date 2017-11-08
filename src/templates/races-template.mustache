@@ -1,0 +1,13 @@
+{{#races}}
+  <div class='card col-md-4 offset-md-2'>
+    <h4 class='card-title'>{{race_name}}</h4>
+    <h6 claee='card-subtitle mb-2 text-muted'>{{election_year}} {{election_type}}</h6>
+    <dl>
+      <dt>Number of candidates</dt>
+      <dd>{{num_candidates}}</dd>
+      <dt>Total money raised</dt>
+      <dd>{{total_money_donated}}</dd>
+    </dl>
+    <a href='{{race_detail_pathname}}?slug={{slug}}' class='btn btn-primary'>Explore</a>
+  </div>
+{{/races}}
