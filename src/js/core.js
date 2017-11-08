@@ -33,7 +33,7 @@ module.exports.handleError = (err, pageCfg, customTitle = 'Server Error', custom
   return err;
 };
 
-module.exports.getPageName = () => path.basename(window.location.pathname) || cfg.rootPage;
+module.exports.getPageName = () => (document.querySelector(`meta[name=${cfg.pageIdMeta}]`) || {content: null}).content;
 
 module.exports.getUrlParameter = (name) => {
   name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');

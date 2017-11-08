@@ -1,6 +1,6 @@
 let entrypointMap = {
-  'index.html': require('./index'),
-  'candidate-detail.html': require('./candidate-detail')
+  'index': require('./index'),
+  'candidate-detail': require('./candidate-detail')
 };
 
 const core = require('./core');
