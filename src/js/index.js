@@ -1,6 +1,6 @@
 module.exports = (core) => {
   let local = { cfg: core.cfg.pages[core.getPageName()] };
-  local.context = { race_detail_pathname: core.cfg.pathnames.raceDetail };
+  local.context = { race_detail_pathname: core.cfg.pages.raceDetail.path };
 
   core.getResource(local.cfg.resource).then((races) => {
     local.context.races = races.data || [];
