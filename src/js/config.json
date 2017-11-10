@@ -8,7 +8,7 @@
         "displayName": "Home",
         "resource": "races",
         "renderMap": [
-          {"template": "races-template", "container": "races-container"}
+          {"template": "racesTemplate", "container": "races-container"}
         ]
       },
       "raceDetail": {

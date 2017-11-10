@@ -1,0 +1,47 @@
+{{#candidate}}
+  <header class='text-center'>
+    <h3 id='candidate-name'>{{name_full}}</h3>
+  </heade
+  <header class='page-header'>
+    <h3>Contributions</h3>
+  </header>
+      <div class="card">
+        <div class="row card-body">
+          <div class='col-md-6 text-center'>
+            <p>Total Money Raised</p>
+            <p class='h4'>{{ total_money_donated }}</p>
+          </div>
+          <div class='col-md-6 text-center'>
+            <p>Top Contributors</p>
+            <p class='h4'>TBA</p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix">&nbsp;</div>
+      <div class="card">
+        <div class="row card-body">
+          <div class='col-md-6 text-center'>
+            <p>Total Money Raised Philly</p>
+            <p class='h4'>{{ total_money_in_philly }}</p>
+          </div>
+          <div class='col-md-6 text-center'>
+            <p>Total Money Raised Outside of Philly</p>
+            <p class='h4'>{{ total_money_out_philly }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix">&nbsp;</div>
+      <div class="card">
+        <div class="row card-body">
+          <div class='col-md-6 text-center'>
+            <p>Total Money In PA</p>
+            <p class='h4'>{{ total_money_in_pa }}</p>
+          </div>
+          <div class='col-md-6 text-center'>
+            <p>Total Money Outside of PA</p>
+            <p class='h4'>{{ total_money_out_pa }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+{{/candidate}}
