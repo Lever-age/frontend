@@ -11,15 +11,21 @@ JS_SRCS       :=                                           \
 	$(SRC_PREFIX)/js/core.js                                 \
 	$(SRC_PREFIX)/js/entrypoint.js                           \
 	$(SRC_PREFIX)/js/candidate-detail.js                     \
-	$(SRC_PREFIX)/js/index.js
+	$(SRC_PREFIX)/js/race-list.js
+INDEX_SRC     := $(BUILD_PREFIX)/race-list.html
 
 BUILD_FILES   :=                                           \
 	$(BUILD_PREFIX)/css/style.css                            \
 	$(BUILD_PREFIX)/js/app.js                                \
 	$(BUILD_PREFIX)/index.html                               \
+	$(BUILD_PREFIX)/race-list.html                           \
 	$(BUILD_PREFIX)/candidate-detail.html
 
 site: $(BUILD_FILES)
+
+$(BUILD_PREFIX)/index.html: $(INDEX_SRC)
+	rm -f $@
+	ln -s $(INDEX_SRC:$(BUILD_PREFIX)/%=%) $@
 
 $(BUILD_PREFIX)/css/style.css: $(CSS_SRCS)
 	@parent=$$(dirname "$@"); test -e "$$parent" || mkdir -p "$$parent"
