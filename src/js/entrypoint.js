@@ -1,5 +1,5 @@
 let entrypointMap = {
-  'raceList': require('./index'),
+  'raceList': require('./race-list'),
   'candidateDetail': require('./candidate-detail')
 };
 
