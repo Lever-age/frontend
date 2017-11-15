@@ -3,10 +3,13 @@ const fs = require('fs');
 const path = require('path');
 const request = require('request');
 const Mustache = require('mustache');
+const _ = require('lodash');
 
 let allCfg = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json')));
 let nodeEnv = process.env.NODE_ENV || 'development';
-let cfg = allCfg[nodeEnv];
+let cfg = allCfg.APP;
+
+if (!_.isUndefined(allCfg[nodeEnv])) cfg = _.merge(cfg, allCfg[nodeEnv]);
 
 let tmplMap = {
   notFoundTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'not-found-template.mustache')),

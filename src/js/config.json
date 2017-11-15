@@ -1,5 +1,5 @@
 {
-  "development": {
+  "APP": {
     "api_prefix": "http://127.0.0.1:5000/api",
     "pageIdMeta": "pageName",
     "pages": {
@@ -22,6 +22,11 @@
         "notFoundTemplateId": "notFoundTemplate",
         "errorTemplateId": "errorTemplate"
       }
+    }
+  },
+  "development": {
+    "raceDetail": {
+      "path": "/race-detail.html"
     }
   }
 }
