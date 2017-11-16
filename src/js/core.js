@@ -15,7 +15,8 @@ let tmplMap = {
   notFoundTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'not-found-template.mustache')),
   errorTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'error-template.mustache')),
   candidateTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'candidate-template.mustache')),
-  racesTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'races-template.mustache'))
+  racesTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'races-template.mustache')),
+  pageNavigation: fs.readFileSync(path.join(__dirname, '..', 'templates', 'navigation.mustache'))
 };
 
 module.exports.cfg = cfg;
@@ -83,3 +84,14 @@ module.exports.formatCurrency = (value = 0) => {
 function parseHTML (htmlString) {
   return document.createRange().createContextualFragment(htmlString);
 }
+
+module.exports.buildNavigation = () => {
+  if (!cfg.pages) return;
+
+  let navItems = [];
+  _.forEach(cfg.pages, page => {
+    if (page.path && page.displayName) navItems.push({ path: page.path, label: page.displayName });
+  });
+
+  return navItems;
+};
