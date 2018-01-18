@@ -3,6 +3,13 @@ module.exports = (core) => {
   let slug = core.getUrlParameter('slug') || window.location.pathname.split('/')[2];
   let pageCfg = core.cfg.pages[core.getPageName()];
 
+  let navTemplate = core.cfg.pagePartials.navigationTemplateId || undefined;
+  if (navTemplate) {
+    let navItems = core.buildNavigation();
+    let nodes = core.renderTemplate(navTemplate, { navigationItems: navItems });
+    core.fillContainer(navTemplate, nodes);
+  }
+
   core.getResource('candidates', { candidate_slug: slug }).then((candidate) => {
     if (candidate.data[0]) {
       let candidateData = candidate.data[0];
@@ -17,7 +24,7 @@ module.exports = (core) => {
       let nodes = core.renderTemplate(pageCfg.mainTemplateId, { candidate: candidateData });
       core.fillContainer(pageCfg.mainContainer, nodes);
     } else {
-      let nodes = core.renderTemplate(pageCfg.notFoundTemplateId, {});
+      let nodes = core.renderTemplate(core.cfg.pagePartials.notFoundTemplateId, {});
       core.fillContainer(pageCfg.mainContainer, nodes);
     }
   }).catch((err) => core.handleError(err, pageCfg));
