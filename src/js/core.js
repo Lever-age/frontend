@@ -16,7 +16,8 @@ let tmplMap = {
   errorTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'error-template.mustache')),
   candidateTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'candidate-template.mustache')),
   racesTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'races-template.mustache')),
-  pageNavigation: fs.readFileSync(path.join(__dirname, '..', 'templates', 'navigation.mustache'))
+  pageNavigation: fs.readFileSync(path.join(__dirname, '..', 'templates', 'navigation.mustache')),
+  raceDetailTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'race-detail-template.mustache'))
 };
 
 module.exports.cfg = cfg;
