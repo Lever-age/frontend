@@ -25,11 +25,13 @@
     }
   },
   "development": {
-    "raceDetail": {
-      "path": "/race-detail.html",
-      "renderMap": [
-        {"template": "raceDetailTemplate", "container": "detail-container"}
-      ]
+    "pages": {
+      "raceDetail": {
+        "path": "/race-detail.html",
+        "renderMap": [
+          {"template": "raceDetailTemplate", "container": "detail-container"}
+        ]
+      }
     }
   }
 }
