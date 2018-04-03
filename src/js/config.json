@@ -14,16 +14,19 @@
         "resource": "races",
         "renderMap": [
           {"template": "racesTemplate", "container": "races-container"}
-        ]
+        ],
+        "showInNavigation": true
       },
       "raceDetail": {
-        "path": ""
+        "path": "",
+        "showInNavigation": true
       },
       "candidateDetail": {
         "path": "/candidate-detail.html",
         "displayName": "Candidates",
         "mainContainer": "pageContent",
-        "mainTemplateId": "candidateTemplate"
+        "mainTemplateId": "candidateTemplate",
+        "showInNavigation": false
       }
     }
   },

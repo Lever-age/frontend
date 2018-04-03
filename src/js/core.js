@@ -85,13 +85,42 @@ function parseHTML (htmlString) {
   return document.createRange().createContextualFragment(htmlString);
 }
 
-module.exports.buildNavigation = () => {
+function buildNavigation () {
   if (!cfg.pages) return;
 
+  // let currentPage = window.location.pathname;
   let navItems = [];
   _.forEach(cfg.pages, page => {
-    if (page.path && page.displayName) navItems.push({ path: page.path, label: page.displayName });
+    if (!_.isUndefined(page.showInNavigation) && page.showInNavigation === true) {
+      if (page.path && page.displayName) navItems.push({ path: page.path, label: page.displayName });
+    }
   });
 
   return navItems;
+}
+module.exports.buildNavigation = buildNavigation;
+
+module.exports.buildPageElement = (section = null) => {
+  if (_.isUndefined(section) || (!_.includes(['navigation', 'header', 'footer'], section))) {
+    return;
+  }
+
+  let sectionTemplate = null;
+  if (section === 'navigation') {
+    sectionTemplate = cfg.pagePartials.navigationTemplateId || undefined;
+  } else if (section === 'footer') {
+    sectionTemplate = 'footer';
+  }
+
+  if (!sectionTemplate) return;
+
+  let sectionElement = null;
+
+  sectionElement = {
+    navigationItems: buildNavigation()
+  };
+
+  let nodes = renderTemplate(sectionTemplate, sectionElement);
+  console.log('nodes', nodes);
+  fillContainer(sectionTemplate, nodes);
 };
