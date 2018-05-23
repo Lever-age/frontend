@@ -1,17 +1,17 @@
 
+import { merge, isUndefined, forEach } from 'lodash';
 const fs = require('fs');
 const path = require('path');
 const request = require('request');
 const Mustache = require('mustache');
-const _ = require('lodash');
 
-let allCfg = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json')));
-let nodeEnv = process.env.NODE_ENV || 'development';
+const allCfg = JSON.parse(fs.readFileSync(path.join(__dirname, 'config.json')));
+const nodeEnv = process.env.NODE_ENV || 'development';
 let cfg = allCfg.APP;
 
-if (!_.isUndefined(allCfg[nodeEnv])) cfg = _.merge(cfg, allCfg[nodeEnv]);
+if (!isUndefined(allCfg[nodeEnv])) cfg = merge(cfg, allCfg[nodeEnv]);
 
-let tmplMap = {
+const tmplMap = {
   notFoundTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'not-found-template.mustache')),
   errorTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'error-template.mustache')),
   candidateTemplate: fs.readFileSync(path.join(__dirname, '..', 'templates', 'candidate-template.mustache')),
@@ -26,7 +26,7 @@ module.exports.getResource = (endpoint, params = {}) => {
   let qstring = Object.keys(params).reduce((qstrPart, curKey, i) =>
     `${qstrPart}${i > 0 ? '&' : ''}${encodeURIComponent(curKey)}=${encodeURIComponent(params[curKey])}`
     , '');
-  let apiEndpoint = `${cfg.api_prefix}/${endpoint}${qstring.length > 0 ? '?' + qstring : ''}`;
+  let apiEndpoint = `${cfg.api_base}/${endpoint}${qstring.length > 0 ? '?' + qstring : ''}`;
 
   return new Promise((resolve, reject) => {
     request(apiEndpoint, (err, resp, body) => {
@@ -34,11 +34,15 @@ module.exports.getResource = (endpoint, params = {}) => {
 
       return resolve(JSON.parse(body));
     });
-  }).catch((err) => err);
+  }).catch((err) => {
+    throw err;
+  });
 };
 
 module.exports.handleError = (err, pageCfg, customTitle = 'Server Error', customMessage = 'An error has occured!') => {
-  let nodes = renderTemplate(pageCfg.errorTemplateId, {});
+  if (!cfg.pagePartials.errorTemplateId) throw new Error('errorTemplateId is missing in configuration!');
+
+  let nodes = renderTemplate(cfg.pagePartials.errorTemplateId, {});
   fillContainer(pageCfg.mainContainer, nodes);
 
   return err;
@@ -88,10 +92,9 @@ function parseHTML (htmlString) {
 function buildNavigation () {
   if (!cfg.pages) return;
 
-  // let currentPage = window.location.pathname;
-  let navItems = [];
-  _.forEach(cfg.pages, page => {
-    if (!_.isUndefined(page.showInNavigation) && page.showInNavigation === true) {
+  const navItems = [];
+  forEach(cfg.pages, page => {
+    if (!isUndefined(page.showInNavigation) && page.showInNavigation === true) {
       if (page.path && page.displayName) navItems.push({ path: page.path, label: page.displayName });
     }
   });
@@ -101,7 +104,7 @@ function buildNavigation () {
 module.exports.buildNavigation = buildNavigation;
 
 module.exports.buildPageElement = (section = null) => {
-  if (_.isUndefined(section) || (!_.includes(['navigation', 'header', 'footer'], section))) {
+  if (isUndefined(section) || (!['navigation', 'header', 'footer'].includes(section))) {
     return;
   }
 
@@ -120,7 +123,6 @@ module.exports.buildPageElement = (section = null) => {
     navigationItems: buildNavigation()
   };
 
-  let nodes = renderTemplate(sectionTemplate, sectionElement);
-  console.log('nodes', nodes);
+  const nodes = renderTemplate(sectionTemplate, sectionElement);
   fillContainer(sectionTemplate, nodes);
 };

@@ -1,6 +1,6 @@
 {
   "APP": {
-    "api_prefix": "http://127.0.0.1:5000/api",
+    "api_base": "http://127.0.0.1:5100/api",
     "pageIdMeta": "pageName",
     "pagePartials": {
       "navigationTemplateId": "pageNavigation",
