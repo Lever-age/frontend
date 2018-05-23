@@ -1,6 +1,6 @@
 {
   "APP": {
-    "api_prefix": "http://127.0.0.1:5000/api",
+    "api_base": "http://127.0.0.1:5100/api",
     "pageIdMeta": "pageName",
     "pages": {
       "raceList": {
@@ -9,18 +9,19 @@
         "resource": "races",
         "renderMap": [
           {"template": "racesTemplate", "container": "races-container"}
-        ]
+        ],
+        "showInNavigation": true
       },
       "raceDetail": {
-        "path": ""
+        "path": "",
+        "showInNavigation": true
       },
       "candidateDetail": {
         "path": "/candidate-detail.html",
         "displayName": "Candidates",
         "mainContainer": "pageContent",
         "mainTemplateId": "candidateTemplate",
-        "notFoundTemplateId": "notFoundTemplate",
-        "errorTemplateId": "errorTemplate"
+        "showInNavigation": false
       }
     }
   },

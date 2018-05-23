@@ -3,12 +3,9 @@ module.exports = (core) => {
   let slug = core.getUrlParameter('slug') || window.location.pathname.split('/')[2];
   let pageCfg = core.cfg.pages[core.getPageName()];
 
-  let navTemplate = core.cfg.pagePartials.navigationTemplateId || undefined;
-  if (navTemplate) {
-    let navItems = core.buildNavigation();
-    let nodes = core.renderTemplate(navTemplate, { navigationItems: navItems });
-    core.fillContainer(navTemplate, nodes);
-  }
+  // build page elements - header, footer
+  core.buildPageElement('navigation');
+  // core.buildPageElement('footer');
 
   core.getResource('candidates', { candidate_slug: slug }).then((candidate) => {
     if (candidate.data[0]) {
