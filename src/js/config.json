@@ -2,11 +2,6 @@
   "APP": {
     "api_base": "http://127.0.0.1:5100/api",
     "pageIdMeta": "pageName",
-    "pagePartials": {
-      "navigationTemplateId": "pageNavigation",
-      "notFoundTemplateId": "notFoundTemplate",
-      "errorTemplateId": "errorTemplate"
-    },
     "pages": {
       "raceList": {
         "path": "/index.html",
@@ -31,6 +26,13 @@
     }
   },
   "development": {
-
+    "pages": {
+      "raceDetail": {
+        "path": "/race-detail.html",
+        "renderMap": [
+          {"template": "raceDetailTemplate", "container": "detail-container"}
+        ]
+      }
+    }
   }
 }

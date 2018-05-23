@@ -1,6 +1,7 @@
 let entrypointMap = {
   'raceList': require('./race-list'),
-  'candidateDetail': require('./candidate-detail')
+  'candidateDetail': require('./candidate-detail'),
+  'raceDetail': require('./race-detail')
 };
 
 const core = require('./core');

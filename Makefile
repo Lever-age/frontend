@@ -19,7 +19,8 @@ BUILD_FILES   :=                                           \
 	$(BUILD_PREFIX)/js/app.js                                \
 	$(BUILD_PREFIX)/index.html                               \
 	$(BUILD_PREFIX)/race-list.html                           \
-	$(BUILD_PREFIX)/candidate-detail.html
+	$(BUILD_PREFIX)/candidate-detail.html                    \
+        $(BUILD_PREFIX)/race-detail.html
 
 site: $(BUILD_FILES)
 
